@@ -1,0 +1,532 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pragati Narrow', sans-serif;
+}
+
+body{
+background: linear-gradient(-40deg, red, orange, black, pink,#673AB7 );
+                                        
+
+
+
+}
+
+
+
+
+header{
+    
+    padding: 2px;
+    width: 100%;   
+    
+}
+
+nav.abajo {
+    z-index: 1;
+    opacity: 0.5;
+}
+
+/*Editando todo el contenedor del navegador*/
+nav.contenedor { 
+    margin: auto;
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+}
+
+/*enlaces del navegador 1*/
+.enlaces{
+    margin-top: 10px;
+}
+.enlaces a {
+    margin: auto;
+    text-transform: uppercase;
+    font-weight: 50;
+    font-size: 14px; 
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+  
+}
+.enlaces a:hover{
+    color: #4c0ea0;
+}
+/*contenedor icono de menu*/
+
+
+.hamburguesa {
+    margin-left: 8vh;
+    margin-top: 5vh;
+    height: 100%;
+    width: 100px;
+    display: none;
+
+   
+}
+
+.hamburguesa img {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4c0ea0;
+    margin-top: 3px;
+}
+
+
+/* edicion de secction 1 */
+
+.section1{
+    margin-top:15vh ;   
+    margin-right: 3vh; 
+}
+
+.contenedorimg1{
+   margin-top: 50px; 
+   text-align: center;
+}
+
+.img1 { 
+  
+    width: 120px;
+    height: 120px;
+}
+
+
+.redes { 
+    
+    text-align: center;
+}
+
+
+.redes a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+   
+    
+}
+
+.redes a:hover{
+    color:  #4c0ea0;
+    
+}
+
+/* edicion section 2 titulo principal y flecha hacia abajo*/
+
+.section2{
+    margin-top: 18vh;
+    text-align: center;
+    margin-left: 1vh;
+}
+
+
+
+.section2 h1{
+    display: inline;
+    
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 30px;
+    margin-bottom: 50px;
+    text-shadow: 0 0 5px #4c0ea0,0 0 10px #4c0ea0,0 0 40px #4c0ea0,0 0 60px #4c0ea0;  
+    animation: texto 2s linear infinite;
+}
+
+@keyframes texto {
+    0% {
+        text-shadow: 0 0 0 #4c0ea0;
+    }
+   20%{
+        text-shadow: 0 0 5 #4c0ea0;
+   } 
+   40%{ 
+        text-shadow: 0 0 10 #4c0ea0;
+   }
+   80%{
+        text-shadow: 0 0 40 #4c0ea0;
+   }
+   100% { 
+        text-shadow: 0 0 60 #4c0ea0;
+   }
+}
+
+
+
+.flechaabajo{
+    margin-top: 3vh;
+    
+}
+.flechaabajo img { 
+    width: 25px;
+    height: 25px;
+    transform: translateY(0deg);
+    animation: flecha 0.5s linear infinite;
+} 
+
+@keyframes flecha { 
+    0%{
+        transform: translateY(20%);
+    }
+    100%{
+        transform: translateY(0%)
+    }
+}
+
+/* edicion subtitulo y su animacion en js*/
+
+
+.fondoanimado{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.section2 h3 {   
+    width: 100vh; 
+    margin-top: 10vh;
+    font-weight: 100;
+    margin-left: 0vh;
+    letter-spacing: 2px;
+    color: white;
+    font-size: 22px;
+    margin-bottom: 20vh;
+    display: inline;
+}
+
+
+
+.galerias { 
+   
+    background-color: transparent;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 100;
+    margin-bottom: 30vh;
+    color: white;
+    font-weight: 100;
+    display: inline-block;
+    height: 8vh;
+    width: 20vw;
+    box-shadow: 0px 0px 10px white,0px 0px 20px white, 0px 0px 40px#4c0ea0;
+    opacity: 0;
+    transition: all 2s;
+}
+
+
+
+
+
+.aparece-galerias{
+    opacity: 1;
+    transform: translateY(-80%);
+}
+/*EDICION SECTION PARTE 2 SUB TITULO E IMAGENES Y SUS ANIMACIONES JS*
+*/
+
+
+    
+ .contenedor-img {
+    margin: auto ;
+    width: 50vw;
+    height: 20vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr );
+    gap: 35px;
+    
+    
+ }  
+
+
+
+.grid-item { 
+    
+   
+    box-shadow: 0px 0px 10px black, 0px 0px 15px white,0px 0px 20px white,0px 0px 80px #4c0ea0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+ 
+   
+    
+    
+}
+
+
+
+
+
+.web__img {
+  filter: grayscale(0);
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+  transform-origin: bottom;
+ 
+}
+
+.web__img:hover{
+    filter: grayscale(0);
+    transition: 0.5s;
+    transform: scale(1.2);
+    
+}
+
+.animacionimg{
+    
+    opacity: 0;
+    transition-delay: 1;
+    transition: all 1s;
+}
+.apareceimg{
+  
+    transform: translateY(-90%);
+    opacity: 1;
+    transition: 1s;
+}
+
+
+
+
+.section3 { 
+    margin-top: 10px;
+}
+
+
+
+
+
+
+.contenedor-slider {
+    width: 80%;
+    max-width: 50vh;
+    margin: 40vh auto;
+    overflow: hidden;
+    box-shadow: 0px 0px 40px white,
+                0px 0px 50px #4c0ea0,0px 0px 50px #4c0ea0;
+    position: relative;
+}
+
+.slider{
+    display: flex;
+    width: 800%;
+    height: 580px ;
+    margin-left: -100%;
+}
+/* aca iria slider section al 100 segun el gordito*/
+
+.slider__section{
+    width: 100%;
+}
+
+.slider__img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+.slider__btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    color: #4c0ea0;
+}
+
+.slider__btn:hover {
+    background-color: gray
+}
+
+
+
+.slider__btn--left {
+  left: 5px;  
+}
+.slider__btn--rigth {
+    right: 5px;
+    margin-top: 2px;
+}
+
+
+.aparece-section3{
+    transform: translateY(-20%);
+    transition: all 3s;
+}
+
+
+
+/*edidicon section 4 IMAGEN en texto */
+
+
+.contenedor-img-texto{
+    margin-top: -200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+.contenedor-img-texto h1 {
+    position: relative;
+    font-size: 18px;
+    color: black;
+
+}
+
+.contenedor-img-texto h1::before{
+    content: attr(data-text);
+    position: absolute;
+    color: white;
+    width: 40vh;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid black;
+    animation: move 8s linear infinite;
+    filter: drop-shadow(0 0 1px violet) drop-shadow(0 0 2px black);
+}
+
+@keyframes move {
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:800px){
+
+    .hamburguesa{
+         display: block;
+        
+        margin-top: 0px;
+    margin-right: 1vh;
+    }
+    .enlaces { 
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        top: 60px;
+        width: 100%;
+        transform: translateX(-100%);
+    }
+    .enlaces3 {
+        transform:translateX(0%);
+    }
+
+    .section2 h1{
+        margin-left: -2vh;
+    }
+
+    .flechaabajo { 
+        margin-left: -4vh;
+    }
+    .section2 h3{
+        width: 80%;
+        padding: 0px;
+        margin-left: -4vh;
+    }
+    .contenedor-img {
+        grid-template-columns: repeat(2,1fr);
+        width: 250px;
+    }
+
+    .galerias{ 
+        width: 25vh;
+        height: 15vh;
+        margin-left: -2vh;
+    }
+
+    .contenedor-slider{
+    margin:60vh auto ;
+    
+    }
+/*animaciones js para mobile*/
+    .aparece-drake{
+    filter: grayscale(0%);
+    transition: 5s;
+}
+
+.aparece-goku{
+    filter: grayscale(0%);
+    transition: 5s;
+}
+
+.aparece-arrow{
+    filter: grayscale(0%);
+    transition: 5s;
+}
+.aparece-kenshin{
+    filter: grayscale(0%);
+    transition: 5s;
+}
+
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:655px){
+
+    .hamburguesa{
+        margin-left: 6vh;
+    }
+
+    .enlaces2 {
+        margin-right: 15vh;}
+
+    .enlaces a{
+        font-size: 10px;
+    } 
+    .contenedor-slider{
+        max-width: 50vh;
+    }
+    .contenedor-slider {
+        margin: 60vh auto;
+    }
+ }
+
+ @media screen and (max-width:465px){
+    .enlaces2 {
+        margin-right: 8vh;}
+        .enlaces a{
+            padding: 0;
+            font-size: 7px;
+            font-weight: 500;
+        } 
+        .contenedor-slider{
+            max-height: 80vh;
+        }
+ }
+   
+
